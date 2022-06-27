@@ -1,0 +1,32 @@
+K8s
+  加標籤
+    kubectl label node w1 node-role.kubernetes.io/worker=; kubectl label node w2 node-role.kubernetes.io/worker=
+  檢查
+    kubectl get nodes
+    kubectl get pod -n kube-system
+
+MetalLB 測試命令
+    kubectl get pod -n metallb-system -o wide
+
+Ingress 測試命令
+    kubectl get service -n ingress-nginx
+    kubectl get ingressclass
+
+Grafana 測試命令
+    kubectl get all -n gf
+
+    http://gf.k8s.org
+        grafana
+        Grafana12345
+
+Prometheus 測試命令
+    kubectl get pod -n monitoring
+
+    http://pgf.k8s.org/
+        admin
+        admin
+
+
+Quay 測試命令
+    kubectl get all -n quay
+    kubectl get ingress -n quay
